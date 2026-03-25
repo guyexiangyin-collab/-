@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- ▼ SEO基本 -->
+<title>JUGGER（ジャガー）とは？世界で大バズり中の新スポーツをわかりやすく解説</title>
+<meta name="description" content="JUGGER（ジャガー）は武器を持った5人が戦う世界30カ国以上で人気爆発中のコンバットスポーツ。ルール・武器・役割をわかりやすく解説。初心者・未経験者歓迎！">
+<meta name="keywords" content="ジャガー,JUGGER,ジャガー スポーツ,jugger スポーツ,ジャガー ルール,ジャガー 武器,コンバットスポーツ,新スポーツ,チームスポーツ,ジャガー 日本,jugger japan,ジャガー とは,jugger とは,ジャガースポーツ日本">
+<meta name="robots" content="index, follow">
+<meta name="author" content="JUGGER JAPAN">
+<link rel="canonical" href="https://juggerjapan.jp/">
+
+<!-- ▼ OGP（SNSシェア用） -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="JUGGER（ジャガー）とは？世界で大バズり中の新スポーツ完全ガイド">
+<meta property="og:description" content="武器を持った5人が激突するコンバットスポーツ「JUGGER（ジャガー）」。世界30カ国以上で人気爆発中！ルール・武器・始め方をわかりやすく解説。">
+<meta property="og:url" content="https://juggerjapan.jp/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="JUGGER JAPAN">
+
+<!-- ▼ Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JUGGER（ジャガー）とは？世界で大バズり中の新スポーツ">
+<meta name="twitter:description" content="武器を持った5人が激突するコンバットスポーツ。世界30カ国以上で人気爆発中のJUGGER（ジャガー）を完全解説！">
+
+<!-- ▼ 構造化データ（JSON-LD） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "JUGGER JAPAN",
+  "description": "JUGGER（ジャガー）は武器を持った5人が戦う、世界30カ国以上で展開されているコンバットスポーツです。",
+  "sport": "JUGGER",
+  "url": "https://juggerjapan.jp/",
+  "areaServed": "JP",
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "JUGGER（ジャガー）とは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JUGGER（ジャガー）は5対5で行うチームコンバットスポーツです。ランナーがジャグ（スカル）を相手ゴールへ運び、エンフォーサーが武器で妨害しながら戦います。世界30カ国以上で展開されており、日本でも急速に広がっています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "JUGGERはどうすれば始められますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JUGGERは特別な体格や運動歴は不要で、誰でも始められます。日本各地にJUGGERのチームやコミュニティがあり、体験会も開催されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "JUGGERのルールは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「321ジャガー！」の掛け声でスタート。ランナーが中央のジャグを拾い、相手ゴールへ運ぶと1点。7点先取で1セット獲得、2セット先取で勝利となります。エンフォーサーは武器で相手を倒すと5カウント（チェーンは8カウント）のダウンを与えられます。"
+      }
+    }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E8001D;
+  --red-dark: #b5001a;
+  --white: #FFFFFF;
+  --off-white: #F7F5F2;
+  --light-gray: #EFEFEF;
+  --mid-gray: #999;
+  --dark: #111111;
+  --text: #1a1a1a;
+  --text-sub: #555;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+  font-size: 15px;
+}
+
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--white);
+  border-bottom: 2px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  height: 52px;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  color: var(--dark);
+}
+.nav-logo span { color: var(--red); }
+.nav-badge {
+  background: var(--red);
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+.ticker-wrap {
+  margin-top: 52px;
+  background: var(--red);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem 0;
+}
+.ticker-inner {
+  display: inline-block;
+  animation: ticker 18s linear infinite;
+}
+.ticker-text {
+  display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.75);
+  padding: 0 2rem;
+}
+.ticker-text .sep { color: rgba(255,255,255,0.3); margin: 0 0.5rem; }
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.hero {
+  background: var(--red);
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.5rem 3rem;
+}
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero-pattern::before {
+  content: '';
+  position: absolute;
+  top: -60%; right: -20%;
+  width: 70%; height: 200%;
+  background: rgba(255,255,255,0.07);
+  transform: rotate(-15deg);
+  border-left: 80px solid rgba(255,255,255,0.04);
+  border-right: 40px solid rgba(255,255,255,0.04);
+}
+.hero-pattern::after {
+  content: '';
+  position: absolute;
+  top: -60%; right: 10%;
+  width: 30%; height: 200%;
+  background: rgba(0,0,0,0.08);
+  transform: rotate(-15deg);
+}
+
+.hero-buzz {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--dark);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+}
+.buzz-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #00ff88;
+  animation: blink 1.2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(3.8rem, 18vw, 7rem);
+  line-height: 1;
+  white-space: nowrap;
+  color: white;
+  letter-spacing: -0.02em;
+  position: relative;
+  margin-bottom: 1.2rem;
+  animation: slideUp 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 320px;
+  animation: slideUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.15s both;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 0;
+  animation: slideUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.25s both;
+}
+.hero-stat {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: rgba(255,255,255,0.12);
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+.hero-stat:last-child { border-right: none; }
+.stat-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.1em;
+  margin-top: 0.3rem;
+  font-weight: 700;
+}
+
+.buzz-section {
+  background: var(--dark);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+.buzz-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+.buzz-title span { color: var(--red); }
+.buzz-cards { display: flex; flex-direction: column; gap: 1rem; }
+.buzz-card {
+  background: rgba(255,255,255,0.06);
+  border-left: 3px solid var(--red);
+  padding: 1rem 1.25rem;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.buzz-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+.buzz-card-title { font-size: 0.78rem; font-weight: 700; color: white; margin-bottom: 0.3rem; letter-spacing: 0.04em; }
+.buzz-card-text { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+.what-section { padding: 3rem 1.5rem; background: var(--off-white); }
+.section-eyebrow {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem; height: 2px;
+  background: var(--red);
+}
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.02em;
+}
+.section-title em { font-style: italic; color: var(--red); }
+.what-text { font-size: 0.92rem; line-height: 1.9; color: var(--text-sub); margin-bottom: 1.5rem; }
+.what-highlight {
+  background: var(--red);
+  color: white;
+  padding: 1.2rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.what-highlight .h-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.field-section { padding: 2.5rem 1.5rem; background: white; text-align: center; }
+.field-svg-wrap { max-width: 300px; margin: 1.5rem auto 0; }
+
+.roles-section { background: var(--off-white); padding: 3rem 1.5rem; }
+.role-cards { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.role-card {
+  background: white;
+  border-top: 4px solid var(--red);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.role-card.enforcer { border-top-color: var(--dark); }
+.role-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  color: var(--light-gray);
+  position: absolute;
+  top: 0; right: 1rem;
+  line-height: 1;
+}
+.role-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+.role-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+  letter-spacing: 0.03em;
+  color: var(--dark);
+  margin-bottom: 0.2rem;
+}
+.role-en { font-family: 'Bebas Neue', sans-serif; font-size: 0.7rem; letter-spacing: 0.25em; color: var(--mid-gray); margin-bottom: 0.75rem; }
+.role-count-badge {
+  display: inline-block;
+  background: var(--red);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+.role-card.enforcer .role-count-badge { background: var(--dark); }
+.role-desc { font-size: 0.87rem; line-height: 1.8; color: var(--text-sub); }
+.role-desc strong { color: var(--text); font-weight: 700; }
+
+.weapons-section { padding: 3rem 1.5rem; background: white; }
+.weapon-section-note {
+  background: var(--off-white);
+  border: 1px solid var(--light-gray);
+  padding: 0.75rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+.weapon-section-note strong { color: var(--red); }
+.weapons-scroll { display: flex; flex-direction: column; gap: 0; margin-top: 1rem; }
+.weapon-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--light-gray);
+  position: relative;
+}
+.weapon-emoji { font-size: 2rem; width: 44px; text-align: center; flex-shrink: 0; }
+.weapon-info { flex: 1 }
+.weapon-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.04em; color: var(--dark); }
+.weapon-spec { font-size: 0.68rem; color: var(--red); font-weight: 700; letter-spacing: 0.06em; margin-top: 0.15rem; }
+.weapon-feature { font-size: 0.78rem; color: var(--text-sub); margin-top: 0.25rem; line-height: 1.5; }
+.weapon-tag {
+  background: var(--off-white);
+  color: var(--mid-gray);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+  letter-spacing: 0.06em;
+  align-self: flex-start;
+}
+.weapon-tag.special { background: #fff0f2; color: var(--red); }
+
+.rules-section { background: var(--off-white); padding: 3rem 1.5rem; }
+.rules-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.rule-card {
+  background: white;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border-left: 4px solid var(--red);
+}
+.rule-icon {
+  width: 36px; height: 36px;
+  background: var(--red);
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+.rule-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--dark); }
+.rule-body { font-size: 0.82rem; line-height: 1.8; color: var(--text-sub); }
+.rule-body strong { color: var(--red); font-weight: 700; }
+
+.down-section { background: var(--dark); padding: 3rem 1.5rem; }
+.down-section .section-eyebrow { color: var(--red); }
+.down-section .section-title { color: white; }
+.down-counts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  margin-top: 1.5rem;
+}
+.down-count-card { background: rgba(255,255,255,0.05); padding: 1.5rem 1rem; text-align: center; }
+.count-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--red); line-height: 1; }
+.count-unit { font-size: 0.65rem; color: rgba(255,255,255,0.4); letter-spacing: 0.2em; font-weight: 700; margin-bottom: 0.5rem; }
+.count-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+.pin-card {
+  margin-top: 1px;
+  background: rgba(232,0,29,0.12);
+  border: 1px solid rgba(232,0,29,0.3);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.pin-icon { font-size: 1.5rem; flex-shrink: 0; }
+.pin-title { font-weight: 700; font-size: 0.9rem; color: var(--red); margin-bottom: 0.3rem; }
+.pin-text { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+.hit-section { padding: 3rem 1.5rem; background: white; }
+.hit-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.hit-card {
+  padding: 1.25rem;
+  border: 1px solid var(--light-gray);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.hit-badge {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 1rem;
+  flex-shrink: 0; border-radius: 50%;
+}
+.hit-badge.ok { background: #e8f5e9; color: #2e7d32; }
+.hit-badge.ng { background: #fce4ec; color: var(--red); }
+.hit-badge.sp { background: #fff8e1; color: #f57f17; }
+.hit-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.35rem; }
+.hit-body { font-size: 0.8rem; line-height: 1.8; color: var(--text-sub); }
+.hit-body strong { color: var(--text); font-weight: 700; }
+
+.forbidden-section { background: var(--off-white); padding: 3rem 1.5rem; }
+.forbidden-group { margin-top: 1.5rem; background: white; }
+.forbidden-head {
+  background: var(--dark);
+  color: white;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.forbidden-head + .forbidden-head { border-top: 1px solid rgba(255,255,255,0.05); }
+.forbidden-list { list-style: none; }
+.forbidden-list li {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.83rem;
+  color: var(--text-sub);
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.7;
+}
+.forbidden-list li::before { content: '×'; color: var(--red); font-weight: 900; flex-shrink: 0; }
+.penalty-note {
+  background: var(--red);
+  color: white;
+  padding: 1rem 1.25rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.7;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.match-section { padding: 3rem 1.5rem; background: white; }
+.match-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--light-gray);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.match-step { background: white; padding: 1.25rem 0.5rem; text-align: center; }
+.match-step-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.match-step-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--red); line-height: 1; }
+.match-step-label { font-size: 0.6rem; color: var(--mid-gray); font-weight: 700; letter-spacing: 0.1em; margin-top: 0.2rem; }
+.match-notes { display: flex; flex-direction: column; gap: 0.75rem; }
+.match-note {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  line-height: 1.7;
+  padding: 0.75rem;
+  background: var(--off-white);
+}
+.match-note-icon {
+  width: 24px; height: 24px;
+  background: var(--red);
+  color: white;
+  font-size: 0.7rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; border-radius: 50%; font-weight: 700;
+}
+
+.cta-section { background: var(--red); padding: 3.5rem 1.5rem; text-align: center; }
+.cta-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-style: italic;
+  font-size: 2.4rem; color: white; line-height: 1;
+  margin-bottom: 1rem; letter-spacing: 0.02em;
+}
+.cta-text { font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 2rem; }
+.cta-btn {
+  display: inline-block;
+  background: white; color: var(--red);
+  font-weight: 900; font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  padding: 1rem 2.5rem;
+  cursor: pointer; border: none;
+  text-decoration: none;
+}
+
+footer { background: var(--dark); padding: 2.5rem 1.5rem; text-align: center; }
+.footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 0.12em; color: white; margin-bottom: 0.5rem; }
+.footer-logo span { color: var(--red); }
+.footer-text { font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; margin-top: 0.4rem; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">JUG<span>G</span>ER</div>
+  <div class="nav-badge">🔥 いま話題</div>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <span class="ticker-text">世界30カ国以上で展開<span class="sep">●</span>5対5 コンバットスポーツ<span class="sep">●</span>武器×チームワーク×戦略<span class="sep">●</span>JUGGER<span class="sep">●</span>世界30カ国以上で展開<span class="sep">●</span>5対5 コンバットスポーツ<span class="sep">●</span>武器×チームワーク×戦略<span class="sep">●</span>JUGGER<span class="sep">●</span></span>
+    <span class="ticker-text">世界30カ国以上で展開<span class="sep">●</span>5対5 コンバットスポーツ<span class="sep">●</span>武器×チームワーク×戦略<span class="sep">●</span>JUGGER<span class="sep">●</span>世界30カ国以上で展開<span class="sep">●</span>5対5 コンバットスポーツ<span class="sep">●</span>武器×チームワーク×戦略<span class="sep">●</span>JUGGER<span class="sep">●</span></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-buzz">
+    <div class="buzz-dot"></div>
+    世界中でいま大バズり中のスポーツ
+  </div>
+  <h1 class="hero-title">JUGGER</h1>
+  <!-- SEO用サブテキスト -->
+  <p style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">ジャガー（JUGGER）スポーツ - 世界で話題の新スポーツ</p>
+  <p class="hero-sub">武器を持った5人が激突する、<br>まったく新しいコンバットスポーツが<br>日本上陸。</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="stat-val">30+</div>
+      <div class="stat-label">参加国</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val">5v5</div>
+      <div class="stat-label">対戦形式</div>
+    </div>
+    <div class="hero-stat">
+      <div class="stat-val">6</div>
+      <div class="stat-label">武器種類</div>
+    </div>
+  </div>
+</section>
+
+<section class="buzz-section">
+  <h2 class="buzz-title">なぜ<span>いま</span>これほど<br>話題なのか？</h2>
+  <div class="buzz-cards">
+    <div class="buzz-card reveal">
+      <div class="buzz-icon">⚡</div>
+      <div>
+        <div class="buzz-card-title">圧倒的なスペクタクル</div>
+        <div class="buzz-card-text">武器を持った選手が激突する映像はSNSで爆発的にシェアされており、「見ていて一番興奮するスポーツ」として注目が急上昇中。</div>
+      </div>
+    </div>
+    <div class="buzz-card reveal">
+      <div class="buzz-icon">🌍</div>
+      <div>
+        <div class="buzz-card-title">世界規模で急拡大中</div>
+        <div class="buzz-card-text">ヨーロッパ発祥で現在30カ国以上に広がり、毎年世界大会が開催。アジアでも急速にコミュニティが拡大している。</div>
+      </div>
+    </div>
+    <div class="buzz-card reveal">
+      <div class="buzz-icon">🎯</div>
+      <div>
+        <div class="buzz-card-title">誰でも始められる</div>
+        <div class="buzz-card-text">特別な体格や運動歴は不要。戦略・役割分担・チームワークで戦うため、体型や年齢を問わず楽しめる競技。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="what-section">
+  <p class="section-eyebrow">WHAT IS JUGGER</p>
+  <h2 class="section-title">JUGGER（ジャガー）って<br><em>何？</em></h2>
+  <p class="what-text">JUGGERは5対5で行うチームコンバットスポーツです。各チームに1人の「ランナー」と4人の「エンフォーサー」が配置されます。</p>
+  <p class="what-text">試合は「321ジャガー！」の掛け声でスタート。フィールド中央に置かれた「ジャグ（スカル）」をランナーが拾い、相手のゴールへ運ぶことで得点。エンフォーサーは武器で相手を妨害しながら、味方ランナーを守ります。</p>
+  <div class="what-highlight">
+    <div class="h-icon">🏆</div>
+    <div>7点先取で1セット獲得。<strong>2セット先取したチームが勝利。</strong>セット間にはコートチェンジあり。</div>
+  </div>
+</section>
+
+<section class="field-section">
+  <p class="section-eyebrow">THE FIELD</p>
+  <h2 class="section-title">フィールド</h2>
+  <div class="field-svg-wrap">
+    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <rect width="300" height="300" fill="#f7f5f2"/>
+      <polygon points="120,15 180,15 255,90 255,210 180,285 120,285 45,210 45,90"
+        fill="white" stroke="#E8001D" stroke-width="2.5"/>
+      <line x1="45" y1="150" x2="255" y2="150" stroke="#ddd" stroke-width="1" stroke-dasharray="5,4"/>
+      <circle cx="150" cy="150" r="25" fill="none" stroke="#E8001D" stroke-width="1.5" stroke-opacity="0.4"/>
+      <circle cx="150" cy="150" r="8" fill="#E8001D"/>
+      <text x="150" y="154" text-anchor="middle" fill="white" font-size="5.5" font-family="sans-serif" font-weight="bold">JUG</text>
+      <rect x="126" y="18" width="48" height="12" rx="2" fill="#111"/>
+      <text x="150" y="27" text-anchor="middle" fill="white" font-size="7" font-family="sans-serif" font-weight="bold">GOAL A</text>
+      <rect x="126" y="270" width="48" height="12" rx="2" fill="#111"/>
+      <text x="150" y="279" text-anchor="middle" fill="white" font-size="7" font-family="sans-serif" font-weight="bold">GOAL B</text>
+      <circle cx="150" cy="70" r="10" fill="#E8001D" opacity="0.9"/>
+      <text x="150" y="74" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">R</text>
+      <circle cx="98" cy="98" r="8" fill="#E8001D" opacity="0.5"/>
+      <circle cx="120" cy="122" r="8" fill="#E8001D" opacity="0.5"/>
+      <circle cx="180" cy="98" r="8" fill="#E8001D" opacity="0.5"/>
+      <circle cx="202" cy="122" r="8" fill="#E8001D" opacity="0.5"/>
+      <circle cx="150" cy="230" r="10" fill="#1565c0" opacity="0.9"/>
+      <text x="150" y="234" text-anchor="middle" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">R</text>
+      <circle cx="98" cy="202" r="8" fill="#1565c0" opacity="0.5"/>
+      <circle cx="120" cy="178" r="8" fill="#1565c0" opacity="0.5"/>
+      <circle cx="180" cy="202" r="8" fill="#1565c0" opacity="0.5"/>
+      <circle cx="202" cy="178" r="8" fill="#1565c0" opacity="0.5"/>
+    </svg>
+    <p style="font-size:0.72rem;color:var(--mid-gray);margin-top:0.5rem;letter-spacing:0.06em;">八角形フィールド　●赤＝ジャグ　R＝ランナー</p>
+  </div>
+</section>
+
+<section class="roles-section">
+  <p class="section-eyebrow">POSITIONS</p>
+  <h2 class="section-title">2つの<em>役割</em></h2>
+  <div class="role-cards">
+    <div class="role-card reveal">
+      <span class="role-num">1</span>
+      <div class="role-icon">🏃</div>
+      <div class="role-name">ランナー</div>
+      <div class="role-en">RUNNER</div>
+      <div class="role-count-badge">1名 / チーム</div>
+      <p class="role-desc">ジャグを拾い、相手ゴールへ運ぶ攻撃の要。武器は持てないが、ジャグを投げることができる（スカル投げ）。<br><strong>手への攻撃も有効</strong>なため、常に全身を守る必要がある。</p>
+    </div>
+    <div class="role-card enforcer reveal">
+      <span class="role-num">4</span>
+      <div class="role-icon">⚔️</div>
+      <div class="role-name">エンフォーサー</div>
+      <div class="role-en">ENFORCER</div>
+      <div class="role-count-badge">4名 / チーム</div>
+      <p class="role-desc">6種類の武器から選び、相手を妨害しながら味方ランナーを守る。ジャグに直接触れることはできないが、武器で動かすことは可能。<br><strong>チェーン使いは1チームに1人まで</strong>という制限あり。</p>
+    </div>
+  </div>
+</section>
+
+<section class="weapons-section">
+  <p class="section-eyebrow">WEAPONS</p>
+  <h2 class="section-title">6種類の<em>武器</em></h2>
+  <div class="weapon-section-note">⚠️ <strong>重要：</strong>スタッフ・Q-TIP・ロングソードは<strong>両手で当てないと</strong>ダウン判定にならない。</div>
+  <div class="weapons-scroll">
+    <div class="weapon-row reveal">
+      <div class="weapon-emoji">🛡️</div>
+      <div class="weapon-info">
+        <div class="weapon-name">SHIELD & SHORT SWORD</div>
+        <div class="weapon-spec">シールド + ショートソード</div>
+        <div class="weapon-feature">防御力が高く近接戦に強い。ショートソードは片手使用可。</div>
+      </div>
+      <div class="weapon-tag special">守備型</div>
+    </div>
+    <div class="weapon-row reveal">
+      <div class="weapon-emoji">🥢</div>
+      <div class="weapon-info">
+        <div class="weapon-name">STAFF</div>
+        <div class="weapon-spec">スタッフ / 全長180cm以下</div>
+        <div class="weapon-feature">攻守バランス最高の万能武器。両手使用必須。</div>
+      </div>
+      <div class="weapon-tag">万能型</div>
+    </div>
+    <div class="weapon-row reveal">
+      <div class="weapon-emoji">⛓️</div>
+      <div class="weapon-info">
+        <div class="weapon-name">CHAIN</div>
+        <div class="weapon-spec">チェーン / 全長320cm以下 / 1チーム1人限定</div>
+        <div class="weapon-feature">広範囲攻撃。被弾で<strong style="color:var(--red)">8カウント</strong>ダウン（通常の1.6倍）。扱い難だが最強クラス。</div>
+      </div>
+      <div class="weapon-tag special">超レア</div>
+    </div>
+    <div class="weapon-row reveal">
+      <div class="weapon-emoji">🏒</div>
+      <div class="weapon-info">
+        <div class="weapon-name">Q-TIP</div>
+        <div class="weapon-spec">キューティップ / 全長200cm以下</div>
+        <div class="weapon-feature">両端スポンジ。あらゆる角度から予想外の攻撃が可能。両手使用必須。</div>
+      </div>
+      <div class="weapon-tag">トリッキー型</div>
+    </div>
+    <div class="weapon-row reveal">
+      <div class="weapon-emoji">🗡️</div>
+      <div class="weapon-info">
+        <div class="weapon-name">LONG SWORD</div>
+        <div class="weapon-spec">ロングソード / 全長140cm以下</div>
+        <div class="weapon-feature">リーチが長く初心者でも使いやすい。両手使用必須。</div>
+      </div>
+      <div class="weapon-tag">初心者向け</div>
+    </div>
+    <div class="weapon-row reveal">
+      <div class="weapon-emoji">⚔️</div>
+      <div class="weapon-info">
+        <div class="weapon-name">DOUBLE SWORD</div>
+        <div class="weapon-spec">ダブルソード / 各85cm以下 × 2本</div>
+        <div class="weapon-feature">両手に1本ずつ。軽量で素早い連続攻撃が得意。</div>
+      </div>
+      <div class="weapon-tag">スピード型</div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-section">
+  <p class="section-eyebrow">CORE RULES</p>
+  <h2 class="section-title">基本<em>ルール</em></h2>
+  <div class="rules-grid">
+    <div class="rule-card reveal">
+      <div class="rule-icon">🎯</div>
+      <div>
+        <div class="rule-title">得点方法</div>
+        <div class="rule-body">ランナーがジャグを相手ゴールに入れると<strong>1点</strong>獲得。</div>
+      </div>
+    </div>
+    <div class="rule-card reveal">
+      <div class="rule-icon">💥</div>
+      <div>
+        <div class="rule-title">当たり判定</div>
+        <div class="rule-body">頭・手のみへの攻撃は無効。「肩→頭」のように他部位を経由した場合は<strong>有効</strong>。ランナー・チェーン使いは手も有効。</div>
+      </div>
+    </div>
+    <div class="rule-card reveal">
+      <div class="rule-icon">📣</div>
+      <div>
+        <div class="rule-title">試合開始</div>
+        <div class="rule-body">「<strong>321ジャガー！</strong>」の掛け声でスタート。両チームがフィールド端から中央のジャグへ走り込む。</div>
+      </div>
+    </div>
+    <div class="rule-card reveal">
+      <div class="rule-icon">🔄</div>
+      <div>
+        <div class="rule-title">選手交代</div>
+        <div class="rule-body">得点ごとに出場メンバーを変更可能。最大10名のロスターを活用できる。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="down-section">
+  <p class="section-eyebrow">DOWN SYSTEM</p>
+  <h2 class="section-title">ダウン<br>システム</h2>
+  <div class="down-counts">
+    <div class="down-count-card reveal">
+      <div class="count-num">5</div>
+      <div class="count-unit">COUNT</div>
+      <div class="count-label">通常武器で<br>攻撃された場合</div>
+    </div>
+    <div class="down-count-card reveal">
+      <div class="count-num">8</div>
+      <div class="count-unit">COUNT</div>
+      <div class="count-label">チェーンで<br>攻撃された場合</div>
+    </div>
+    <div class="down-count-card reveal" style="grid-column:1/-1;border-top:1px solid rgba(255,255,255,0.06);">
+      <div class="count-num">5</div>
+      <div class="count-unit">PENALTY COUNT</div>
+      <div class="count-label">禁止行為を行った場合のペナルティダウン</div>
+    </div>
+  </div>
+  <div class="pin-card">
+    <div class="pin-icon">📌</div>
+    <div>
+      <div class="pin-title">ピン（PIN）とは？</div>
+      <div class="pin-text">ダウン中の相手に自分の武器を触れさせ続けることで、相手のカウントを止めることができる特殊テクニック。武器が離れると相手はカウントを再開する。</div>
+    </div>
+  </div>
+</section>
+
+<section class="hit-section">
+  <p class="section-eyebrow">HIT DETECTION</p>
+  <h2 class="section-title">当たり<em>判定</em></h2>
+  <div class="hit-grid">
+    <div class="hit-card reveal">
+      <div class="hit-badge ok">✓</div>
+      <div>
+        <div class="hit-title">有効な攻撃</div>
+        <div class="hit-body">頭・手以外の全身への攻撃。「肩→頭」のように他部位を経由した攻撃も有効。<strong>ランナーとチェーン使いは手への攻撃も有効。</strong></div>
+      </div>
+    </div>
+    <div class="hit-card reveal">
+      <div class="hit-badge ng">×</div>
+      <div>
+        <div class="hit-title">無効な攻撃</div>
+        <div class="hit-body">頭のみ・手のみへの攻撃（ランナー・チェーン使い以外）。スタッフ・Q-TIP・ロングソードを片手で当てた攻撃も無効。</div>
+      </div>
+    </div>
+    <div class="hit-card reveal">
+      <div class="hit-badge sp">★</div>
+      <div>
+        <div class="hit-title">スカル（ジャグ投げ）</div>
+        <div class="hit-body">ランナーはジャグを投げることができる。エンフォーサーはジャグに触れることはできないが、<strong>武器でジャグを動かすことは可能。</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="forbidden-section">
+  <p class="section-eyebrow">PROHIBITED</p>
+  <h2 class="section-title">禁止<em>行為</em></h2>
+  <div class="forbidden-group reveal">
+    <div class="forbidden-head">⚔️ エンフォーサーの禁止行為</div>
+    <ul class="forbidden-list">
+      <li>不必要に乱暴なプレイ</li>
+      <li>ゴールの開口部を塞ぐ・ブロックする</li>
+      <li>ジャグを蹴る・直接触れる</li>
+      <li>ダウン後にチェーンを意図的に引っ張る・絡ませる</li>
+      <li>体の一部がフィールドから出る</li>
+    </ul>
+    <div class="forbidden-head">🏃 ランナーの禁止行為</div>
+    <ul class="forbidden-list">
+      <li>殴る・蹴る・投げる</li>
+      <li>相手の腕・服を引っ張る</li>
+      <li>ジャグを場外に出した場合は速やかに取りに行く義務あり（+5カウントペナルティ）</li>
+    </ul>
+  </div>
+  <div class="penalty-note reveal">⚠️ 禁止行為を行ったプレイヤーには <strong>5カウントのペナルティダウン</strong> が課される。</div>
+</section>
+
+<section class="match-section">
+  <p class="section-eyebrow">MATCH FORMAT</p>
+  <h2 class="section-title">試合<em>形式</em></h2>
+  <div class="match-flow">
+    <div class="match-step">
+      <div class="match-step-icon">👥</div>
+      <div class="match-step-val">5 vs 5</div>
+      <div class="match-step-label">対戦人数</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-icon">🎯</div>
+      <div class="match-step-val">7点</div>
+      <div class="match-step-label">セット取得条件</div>
+    </div>
+    <div class="match-step">
+      <div class="match-step-icon">🏆</div>
+      <div class="match-step-val">2セット</div>
+      <div class="match-step-label">勝利条件</div>
+    </div>
+  </div>
+  <div class="match-notes">
+    <div class="match-note reveal"><div class="match-note-icon">↔</div><div>セット終了ごとに<strong>コートチェンジ</strong>あり</div></div>
+    <div class="match-note reveal"><div class="match-note-icon">⏱</div><div>各チームはセットごとに<strong>1回のタイムアウト</strong>（最後の4分間は使用不可）</div></div>
+    <div class="match-note reveal"><div class="match-note-icon">👤</div><div>チームは最大<strong>10名</strong>。フィールドには5名。得点ごとに交代可能</div></div>
+    <div class="match-note reveal"><div class="match-note-icon">⛓</div><div><strong>チェーン使いは1チームに1人まで</strong>という制限あり</div></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2 class="cta-title">JUGGERを<br>はじめよう</h2>
+  <p class="cta-text">体格・運動歴・年齢不問。<br>チームで戦う新しいスポーツが<br>あなたを待っている。</p>
+  <a class="cta-btn" href="#">チームを探す</a>
+</section>
+
+<footer>
+  <div class="footer-logo">JUG<span>G</span>ER</div>
+  <p class="footer-text">JAPAN JUGGER COMMUNITY</p>
+  <p class="footer-text" style="margin-top:0.5rem;">本ページはJUGGERのルール紹介を目的としています</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('in'), 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
