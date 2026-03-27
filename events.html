@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>イベント情報 | JUGGER JAPAN — ジャガースポーツ</title>
+<meta name="description" content="JUGGER JAPAN主催のイベント・大会・体験会情報。初心者体験会から公式大会まで、ジャガースポーツのイベントに参加しよう！">
+<meta name="keywords" content="ジャガー イベント,JUGGER 大会,ジャガー 体験会,jugger japan イベント,ジャガースポーツ 参加">
+<link rel="canonical" href="https://jugger.jp/events.html">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #E8001D;
+  --white: #FFFFFF;
+  --off-white: #F4F2EF;
+  --light-gray: #E8E8E8;
+  --mid-gray: #888;
+  --dark: #0e0e0e;
+  --text: #1a1a1a;
+  --text-sub: #555;
+}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior:smooth; }
+body { background:#F0EEEB; color:var(--text); font-family:'Noto Sans JP',sans-serif; overflow-x:hidden; }
+
+/* ── NAV ── */
+.nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:var(--white); border-bottom:2.5px solid var(--red);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 1.25rem; height:52px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+.nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.08em; color:var(--dark); text-decoration:none; }
+.nav-logo span { color:var(--red); }
+.nav-links { display:flex; gap:0.3rem; }
+.nav-link { font-family:'Bebas Neue',sans-serif; font-size:0.68rem; letter-spacing:0.08em; color:var(--dark); text-decoration:none; padding:0.3rem 0.5rem; border:1.5px solid transparent; transition:all 0.2s; border-radius:2px; }
+.nav-link:hover { border-color:var(--red); color:var(--red); }
+.nav-link.active { background:var(--red); color:white; border-color:var(--red); }
+
+/* ── PAGE HEADER ── */
+.page-header {
+  margin-top:52px; background:var(--dark);
+  padding:2.5rem 1.5rem; position:relative; overflow:hidden;
+}
+.page-header::before { content:''; position:absolute; top:-60%; right:-10%; width:65%; height:220%; background:rgba(232,0,29,0.07); transform:rotate(-12deg); }
+.page-header::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--red), transparent); }
+.page-header-eyebrow { font-family:'Bebas Neue',sans-serif; font-size:0.7rem; letter-spacing:0.4em; color:var(--red); margin-bottom:0.5rem; position:relative; z-index:1; }
+.page-header-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-style:italic; font-size:3.2rem; color:white; line-height:1; position:relative; z-index:1; }
+.page-header-sub { font-size:0.85rem; color:rgba(255,255,255,0.5); margin-top:0.6rem; line-height:1.8; position:relative; z-index:1; }
+
+/* ── TABS ── */
+.tabs {
+  display:flex; background:white;
+  border-bottom:2px solid var(--light-gray);
+  position:sticky; top:52px; z-index:50;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+.tab-btn {
+  flex:1; padding:0.85rem 0.5rem; font-size:0.78rem; font-weight:700;
+  color:var(--mid-gray); border:none; background:none; cursor:pointer;
+  border-bottom:2px solid transparent; margin-bottom:-2px;
+  transition:all 0.2s; letter-spacing:0.04em;
+  font-family:'Noto Sans JP',sans-serif;
+}
+.tab-btn.active { color:var(--red); border-bottom-color:var(--red); }
+
+/* ── COMING SOON HERO ── */
+.coming-hero {
+  background:white; margin:1.25rem;
+  border-radius:16px; overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  text-align:center; padding:3rem 1.5rem;
+  position:relative;
+}
+.coming-hero::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(232,0,29,0.06), transparent);
+}
+.coming-icon { font-size:4rem; margin-bottom:1rem; position:relative; z-index:1; }
+.coming-title {
+  font-family:'Barlow Condensed',sans-serif; font-weight:900; font-style:italic;
+  font-size:2rem; color:var(--dark); margin-bottom:0.5rem; position:relative; z-index:1;
+}
+.coming-title em { color:var(--red); }
+.coming-text { font-size:0.85rem; color:var(--text-sub); line-height:1.9; margin-bottom:1.5rem; position:relative; z-index:1; }
+.coming-badge {
+  display:inline-flex; align-items:center; gap:0.4rem;
+  background:var(--off-white); color:var(--mid-gray);
+  font-size:0.72rem; font-weight:700; letter-spacing:0.1em;
+  padding:0.4rem 1rem; border-radius:50px;
+  position:relative; z-index:1;
+}
+.coming-dot { width:6px; height:6px; border-radius:50%; background:#f59e0b; animation:blink 1.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* ── NOTIFY FORM ── */
+.notify-section { padding:0 1.25rem 1.25rem; }
+.notify-card {
+  background:var(--red); border-radius:12px; padding:1.5rem;
+  box-shadow:0 4px 20px rgba(232,0,29,0.25);
+  text-align:center;
+}
+.notify-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-style:italic; font-size:1.6rem; color:white; margin-bottom:0.5rem; }
+.notify-text { font-size:0.82rem; color:rgba(255,255,255,0.82); line-height:1.8; margin-bottom:1.25rem; }
+.notify-btns { display:flex; flex-direction:column; gap:0.75rem; }
+.notify-btn {
+  display:flex; align-items:center; justify-content:center; gap:0.6rem;
+  padding:0.9rem 1.5rem; border-radius:8px;
+  font-weight:700; font-size:0.85rem; letter-spacing:0.04em;
+  text-decoration:none; transition:transform 0.15s, opacity 0.15s;
+}
+.notify-btn:active { transform:scale(0.97); opacity:0.9; }
+.notify-btn.line { background:white; color:var(--red); }
+.notify-btn.x    { background:rgba(255,255,255,0.15); color:white; border:1px solid rgba(255,255,255,0.3); }
+
+/* ── EVENT TYPE CARDS ── */
+.event-types { padding:0 1.25rem 1.25rem; }
+.event-types-title {
+  font-family:'Bebas Neue',sans-serif; font-size:0.75rem; letter-spacing:0.3em;
+  color:var(--mid-gray); margin-bottom:0.75rem;
+  display:flex; align-items:center; gap:0.5rem;
+}
+.event-types-title::after { content:''; flex:1; height:1px; background:var(--light-gray); }
+.event-type-cards { display:flex; flex-direction:column; gap:0.75rem; }
+.event-type-card {
+  background:white; border-radius:10px;
+  padding:1.25rem; display:flex; gap:1rem; align-items:flex-start;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  border-left:4px solid var(--light-gray);
+  transition:border-color 0.2s;
+}
+.event-type-card.experience { border-left-color:#2e7d32; }
+.event-type-card.practice   { border-left-color:#1565c0; }
+.event-type-card.tournament { border-left-color:var(--red); }
+.event-type-icon {
+  width:44px; height:44px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.4rem; flex-shrink:0;
+}
+.event-type-card.experience .event-type-icon { background:#e8f5e9; }
+.event-type-card.practice   .event-type-icon { background:#e3f2fd; }
+.event-type-card.tournament .event-type-icon { background:#fce4ec; }
+.event-type-name { font-weight:700; font-size:0.92rem; margin-bottom:0.3rem; }
+.event-type-card.experience .event-type-name { color:#2e7d32; }
+.event-type-card.practice   .event-type-name { color:#1565c0; }
+.event-type-card.tournament .event-type-name { color:var(--red); }
+.event-type-desc { font-size:0.8rem; color:var(--text-sub); line-height:1.7; }
+
+/* ── PAST PLACEHOLDER ── */
+.past-section { padding:0 1.25rem 1.5rem; }
+.past-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+.past-card {
+  background:white; border-radius:10px; overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+.past-card-img {
+  width:100%; aspect-ratio:4/3;
+  background:var(--light-gray);
+  display:flex; align-items:center; justify-content:center;
+  font-size:2rem; color:var(--mid-gray);
+  position:relative;
+}
+.past-card-img::after {
+  content:'準備中';
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.7rem; font-weight:700; color:var(--mid-gray);
+  letter-spacing:0.1em;
+  background:linear-gradient(135deg, #f0eeeb, #e8e8e8);
+}
+.past-card-body { padding:0.75rem; }
+.past-card-title { font-size:0.78rem; font-weight:700; margin-bottom:0.2rem; color:var(--dark); }
+.past-card-date { font-size:0.65rem; color:var(--mid-gray); }
+
+/* ── SNS FOLLOW CTA ── */
+.sns-cta {
+  background:var(--dark); padding:2.5rem 1.5rem; text-align:center;
+}
+.sns-cta-title { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-style:italic; font-size:1.8rem; color:white; margin-bottom:0.5rem; }
+.sns-cta-text { font-size:0.82rem; color:rgba(255,255,255,0.5); line-height:1.8; margin-bottom:1.5rem; }
+.sns-cta-btns { display:flex; gap:0.75rem; justify-content:center; }
+.sns-cta-btn {
+  display:flex; align-items:center; gap:0.4rem;
+  padding:0.75rem 1.25rem; border-radius:50px;
+  font-weight:700; font-size:0.82rem; text-decoration:none;
+  transition:transform 0.15s;
+}
+.sns-cta-btn:active { transform:scale(0.96); }
+.sns-cta-btn.x  { background:white; color:black; }
+.sns-cta-btn.ig { background:linear-gradient(135deg,#f09433,#bc1888); color:white; }
+
+/* ── FOOTER ── */
+footer { background:#060606; padding:2rem 1.25rem; }
+.footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.12em; color:white; margin-bottom:0.75rem; }
+.footer-logo span { color:var(--red); }
+.footer-nav { display:flex; flex-wrap:wrap; gap:0.5rem 1.25rem; margin-bottom:1rem; }
+.footer-nav a { font-family:'Bebas Neue',sans-serif; font-size:0.75rem; letter-spacing:0.12em; color:rgba(255,255,255,0.35); text-decoration:none; }
+.footer-copy { font-size:0.68rem; color:rgba(255,255,255,0.2); }
+
+.reveal { opacity:0; transform:translateY(16px); transition:opacity 0.5s ease, transform 0.5s ease; }
+.reveal.in { opacity:1; transform:translateY(0); }
+
+.nav-logo { display:flex; align-items:center; gap:0.5rem; text-decoration:none; }
+.nav-logo-img { width:32px; height:32px; object-fit:contain; flex-shrink:0; }
+.nav-logo-text { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.06em; color:var(--dark,#111); display:flex; align-items:center; gap:0.35rem; }
+.nav-official { background:var(--red,#E8001D); color:white; font-size:0.5rem; font-weight:700; letter-spacing:0.08em; padding:0.15rem 0.35rem; border-radius:2px; vertical-align:middle; font-family:'Noto Sans JP',sans-serif; }
+
+.footer-contact { margin-bottom:1.25rem; }
+.footer-contact-label { font-size:0.65rem; color:rgba(255,255,255,0.3); letter-spacing:0.15em; font-family:'Bebas Neue',sans-serif; margin-bottom:0.3rem; }
+.footer-contact-email { color:rgba(255,255,255,0.6); font-size:0.82rem; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:0.1rem; }
+.footer-contact-email:hover { color:white; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html"><img class="nav-logo-img" src="data:image/png;base64,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" alt="日本ジャガー協会ロゴ"><span class="nav-logo-text">JUGGER<span class="nav-official">公式</span></span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="index.html">TOP</a>
+    <a class="nav-link" href="rules.html">ルール</a>
+    <a class="nav-link" href="weapons.html">武器</a>
+    <a class="nav-link active" href="events.html">イベント</a>
+    <a class="nav-link" href="sns.html">SNS</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-eyebrow">EVENTS</div>
+  <h1 class="page-header-title">イベント情報</h1>
+  <p class="page-header-sub">体験会・練習会・大会など<br>JUGGERのイベント情報をここで発信します。</p>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab(this,'upcoming')">開催予定</button>
+  <button class="tab-btn" onclick="switchTab(this,'past')">過去のイベント</button>
+</div>
+
+<!-- UPCOMING TAB -->
+<div id="tab-upcoming">
+
+  <!-- Coming Soon -->
+  <div class="coming-hero reveal">
+    <div class="coming-icon">📅</div>
+    <div class="coming-title">イベント情報を<em>準備中</em></div>
+    <div class="coming-text">
+      現在、次回のイベント情報を準備しています。<br>
+      体験会・練習会・大会など随時更新予定です。<br>
+      最新情報はSNSで先行発信します！
+    </div>
+    <div class="coming-badge"><div class="coming-dot"></div>COMING SOON</div>
+  </div>
+
+  <!-- Notify -->
+  <div class="notify-section reveal">
+    <div class="notify-card">
+      <div class="notify-title">イベント情報を<br>いち早くGET</div>
+      <div class="notify-text">開催情報はSNSで最速発信！<br>フォローして見逃さないようにしよう。</div>
+      <div class="notify-btns">
+        <a class="notify-btn x" href="https://x.com/jugger__japan" target="_blank" rel="noopener">
+          <span>𝕏</span> Xでフォローする（速報はこちら）
+        </a>
+        <a class="notify-btn line" href="https://www.instagram.com/jugger_japan" target="_blank" rel="noopener">
+          <span>📸</span> Instagramでフォローする
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event types -->
+  <div class="event-types">
+    <div class="event-types-title">開催予定のイベント種別</div>
+    <div class="event-type-cards">
+      <div class="event-type-card experience reveal">
+        <div class="event-type-icon">🌱</div>
+        <div>
+          <div class="event-type-name">初心者体験会</div>
+          <div class="event-type-desc">JUGGERを初めて体験する方向けのイベント。ルール説明から実際のプレーまで丁寧にサポート。運動着があれば誰でも参加OK！</div>
+        </div>
+      </div>
+      <div class="event-type-card practice reveal">
+        <div class="event-type-icon">⚔️</div>
+        <div>
+          <div class="event-type-name">定期練習会</div>
+          <div class="event-type-desc">定期的に開催する練習会。初心者から経験者まで一緒に練習できます。チームプレーや武器の使い方を磨こう。</div>
+        </div>
+      </div>
+      <div class="event-type-card tournament reveal">
+        <div class="event-type-icon">🏆</div>
+        <div>
+          <div class="event-type-name">大会・トーナメント</div>
+          <div class="event-type-desc">日本国内のJUGGER公式・非公式大会情報。チームを組んで本格的な試合を体験しよう。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAST TAB -->
+<div id="tab-past" style="display:none;">
+  <div class="past-section" style="padding-top:1.25rem;">
+    <div class="event-types-title">過去のイベント</div>
+    <div class="past-grid">
+      <div class="past-card reveal">
+        <div class="past-card-img"></div>
+        <div class="past-card-body">
+          <div class="past-card-title">初心者体験会</div>
+          <div class="past-card-date">2025年〇月〇日</div>
+        </div>
+      </div>
+      <div class="past-card reveal">
+        <div class="past-card-img"></div>
+        <div class="past-card-body">
+          <div class="past-card-title">定期練習会</div>
+          <div class="past-card-date">2025年〇月〇日</div>
+        </div>
+      </div>
+      <div class="past-card reveal">
+        <div class="past-card-img"></div>
+        <div class="past-card-body">
+          <div class="past-card-title">交流戦</div>
+          <div class="past-card-date">2025年〇月〇日</div>
+        </div>
+      </div>
+      <div class="past-card reveal">
+        <div class="past-card-img"></div>
+        <div class="past-card-body">
+          <div class="past-card-title">体験会</div>
+          <div class="past-card-date">2025年〇月〇日</div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.75rem;color:var(--mid-gray);margin-top:1rem;line-height:1.7;">過去のイベント写真・詳細は<br>SNSのアーカイブからご覧いただけます。</p>
+  </div>
+</div>
+
+<!-- SNS CTA -->
+<div class="sns-cta">
+  <div class="sns-cta-title">最新情報はSNSで</div>
+  <div class="sns-cta-text">イベントの速報・詳細・レポートは<br>公式SNSから発信しています。</div>
+  <div class="sns-cta-btns">
+    <a class="sns-cta-btn x" href="https://x.com/jugger__japan" target="_blank" rel="noopener">𝕏 フォロー</a>
+    <a class="sns-cta-btn ig" href="https://www.instagram.com/jugger_japan" target="_blank" rel="noopener">📸 フォロー</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">JUG<span>G</span>ER</div>
+  
+  <div class="footer-contact">
+    <div class="footer-contact-label">お問い合わせ</div>
+    <a class="footer-contact-email" href="mailto:info@jugger.jp">info@jugger.jp</a>
+  </div>
+  <div class="footer-nav">
+    <a href="index.html">トップ</a>
+    <a href="rules.html">ルール</a>
+    <a href="weapons.html">武器紹介</a>
+    <a href="events.html">イベント</a>
+    <a href="sns.html">SNS</a>
+  </div>
+  <div class="footer-copy">© 2025 日本ジャガー協会 / JUGGER JAPAN</div>
+</footer>
+
+<script>
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-upcoming').style.display = tabId === 'upcoming' ? 'block' : 'none';
+  document.getElementById('tab-past').style.display     = tabId === 'past'     ? 'block' : 'none';
+}
+document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+</script>
+</body>
+</html>
