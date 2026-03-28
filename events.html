@@ -26,17 +26,33 @@ body { background:#F0EEEB; color:var(--text); font-family:'Noto Sans JP',sans-se
 /* ── NAV ── */
 .nav {
   position:fixed; top:0; left:0; right:0; z-index:100;
-  background:var(--white); border-bottom:2.5px solid var(--red);
+  background:var(--white,#fff); border-bottom:2px solid #E8001D;
   display:flex; align-items:center; justify-content:space-between;
-  padding:0 1.25rem; height:52px;
+  padding:0 0.75rem; height:52px;
   box-shadow:0 2px 12px rgba(0,0,0,0.08);
 }
-.nav-logo { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:0.08em; color:var(--dark); text-decoration:none; }
-.nav-logo span { color:var(--red); }
-.nav-links { display:flex; gap:0.3rem; }
-.nav-link { font-family:'Bebas Neue',sans-serif; font-size:0.68rem; letter-spacing:0.08em; color:var(--dark); text-decoration:none; padding:0.3rem 0.5rem; border:1.5px solid transparent; transition:all 0.2s; border-radius:2px; }
-.nav-link:hover { border-color:var(--red); color:var(--red); }
-.nav-link.active { background:var(--red); color:white; border-color:var(--red); }
+.nav-logo { display:flex; align-items:center; gap:0.35rem; text-decoration:none; flex-shrink:0; min-width:0; }
+.nav-logo-img { width:26px; height:26px; object-fit:contain; flex-shrink:0; }
+.nav-logo-text { font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:0.05em; color:#111; display:flex; align-items:center; gap:0.25rem; white-space:nowrap; }
+.nav-official { background:#E8001D; color:white; font-size:0.42rem; font-weight:700; letter-spacing:0.05em; padding:0.1rem 0.25rem; border-radius:2px; font-family:sans-serif; flex-shrink:0; }
+.nav-org { display:flex; flex-direction:column; justify-content:center; gap:0; border-left:1px solid #E8E8E8; padding-left:0.45rem; margin-left:0.1rem; overflow:hidden; }
+.nav-org-ja { font-family:'Noto Serif JP',serif; font-size:0.72rem; font-weight:700; color:#111; letter-spacing:0.03em; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.nav-org-en { font-family:'Noto Serif JP',serif; font-size:0.5rem; font-weight:400; color:#888; letter-spacing:0.02em; line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.nav-links { display:flex; gap:0.15rem; flex-shrink:0; }
+.nav-link { font-family:'Bebas Neue',sans-serif; font-size:0.62rem; letter-spacing:0.06em; color:#111; text-decoration:none; padding:0.25rem 0.4rem; border:1.5px solid transparent; transition:all 0.2s; border-radius:2px; white-space:nowrap; }
+.nav-link:hover { border-color:#E8001D; color:#E8001D; }
+.nav-link.active { background:#E8001D; color:white; border-color:#E8001D; }
+/* スマホで日本語テキストを非表示 */
+@media (max-width: 480px) {
+  .nav-org-ja { font-size:0.65rem; }
+  .nav-org-en { display:none; }
+  .nav-logo-text { font-size:1.05rem; }
+}
+@media (max-width: 400px) {
+  .nav-org { display:none; }
+  .nav-logo-text { font-size:1rem; }
+  .nav-link { font-size:0.58rem; padding:0.2rem 0.3rem; }
+}
 
 /* ── PAGE HEADER ── */
 .page-header {
@@ -192,12 +208,12 @@ body { background:#F0EEEB; color:var(--text); font-family:'Noto Sans JP',sans-se
 .sns-cta-btn.ig { background:linear-gradient(135deg,#f09433,#bc1888); color:white; }
 
 /* ── FOOTER ── */
-footer { background:#060606; padding:2rem 1.25rem; }
+footer { background:#ffffff; border-top:1px solid #e8e8e8; padding:2rem 1.25rem; }
 .footer-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.12em; color:white; margin-bottom:0.75rem; }
 .footer-logo span { color:var(--red); }
 .footer-nav { display:flex; flex-wrap:wrap; gap:0.5rem 1.25rem; margin-bottom:1rem; }
-.footer-nav a { font-family:'Bebas Neue',sans-serif; font-size:0.75rem; letter-spacing:0.12em; color:rgba(255,255,255,0.35); text-decoration:none; }
-.footer-copy { font-size:0.68rem; color:rgba(255,255,255,0.2); }
+.footer-nav a { font-family:'Bebas Neue',sans-serif; font-size:0.75rem; letter-spacing:0.12em; color:rgba(0,0,0,0.55); text-decoration:none; }
+.footer-copy { font-size:0.68rem; color:rgba(0,0,0,0.4); }
 
 .reveal { opacity:0; transform:translateY(16px); transition:opacity 0.5s ease, transform 0.5s ease; }
 .reveal.in { opacity:1; transform:translateY(0); }
@@ -208,20 +224,27 @@ footer { background:#060606; padding:2rem 1.25rem; }
 .nav-official { background:var(--red,#E8001D); color:white; font-size:0.5rem; font-weight:700; letter-spacing:0.08em; padding:0.15rem 0.35rem; border-radius:2px; vertical-align:middle; font-family:'Noto Sans JP',sans-serif; }
 
 .footer-contact { margin-bottom:1.25rem; }
-.footer-contact-label { font-size:0.65rem; color:rgba(255,255,255,0.3); letter-spacing:0.15em; font-family:'Bebas Neue',sans-serif; margin-bottom:0.3rem; }
-.footer-contact-email { color:rgba(255,255,255,0.6); font-size:0.82rem; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:0.1rem; }
+.footer-contact-label { font-size:0.65rem; color:rgba(0,0,0,0.45); letter-spacing:0.15em; font-family:'Bebas Neue',sans-serif; margin-bottom:0.3rem; }
+.footer-contact-email { color:#333; font-size:0.82rem; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:0.1rem; }
 .footer-contact-email:hover { color:white; }
 </style>
 </head>
 <body>
 
 <nav class="nav">
-  <a class="nav-logo" href="index.html"><img class="nav-logo-img" src="data:image/png;base64,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" alt="日本ジャガー協会ロゴ"><span class="nav-logo-text">JUGGER<span class="nav-official">公式</span></span></a>
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-img" src="data:image/png;base64,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" alt="日本ジャガー協会ロゴ">
+    <span class="nav-logo-text">JUGGER<span class="nav-official" style="background:var(--red);color:white;font-size:0.48rem;font-weight:700;letter-spacing:0.06em;padding:0.15rem 0.3rem;border-radius:2px;font-family:sans-serif;">公式</span></span>
+    <div class="nav-org">
+      <span class="nav-org-ja">日本ジャガー協会</span>
+      <span class="nav-org-en">Japan Jugger Association</span>
+    </div>
+  </a>
   <div class="nav-links">
     <a class="nav-link" href="index.html">TOP</a>
     <a class="nav-link" href="rules.html">ルール</a>
     <a class="nav-link" href="weapons.html">武器</a>
-    <a class="nav-link active" href="events.html">イベント</a>
+    <a class="nav-link  active" href="events.html">イベント</a>
     <a class="nav-link" href="sns.html">SNS</a>
   </div>
 </nav>
@@ -260,10 +283,10 @@ footer { background:#060606; padding:2rem 1.25rem; }
       <div class="notify-text">開催情報はSNSで最速発信！<br>フォローして見逃さないようにしよう。</div>
       <div class="notify-btns">
         <a class="notify-btn x" href="https://x.com/jugger__japan" target="_blank" rel="noopener">
-          <span>𝕏</span> Xでフォローする（速報はこちら）
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwMDAiLz48c3ZnIHg9IjExIiB5PSIxMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGQ9Ik0xMi42Ljc1aDIuNDU0bC01LjM2IDYuMTQyTDE2IDE1LjI1aC00LjkzN2wtMy44NjctNS4wNy00LjQyNSA1LjA3SC4zMTZsNS43MzMtNi41N0wwIC43NWg1LjA2M2wzLjQ5NSA0LjYzM0wxMi42MDEuNzVabS0uODYgMTMuMDI4aDEuMzZMNC4zMjMgMi4xNDVIMi44NjV6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPjwvc3ZnPg==" alt="X" style="width:1.2rem;height:1.2rem;border-radius:3px;vertical-align:middle;"> Xでフォローする（速報はこちら）
         </a>
         <a class="notify-btn line" href="https://www.instagram.com/jugger_japan" target="_blank" rel="noopener">
-          <span>📸</span> Instagramでフォローする
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJpZzIiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmQ2MDAiLz48c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZmMDY5ZSIvPjxzdG9wIG9mZnNldD0iNzUlIiBzdG9wLWNvbG9yPSIjZmYwMDZhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjkwMGZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9InVybCgjaWcyKSIvPjxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNy41IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSIzOS41IiBjeT0iMjAuNSIgcj0iMi4yIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="Instagram" style="width:1.2rem;height:1.2rem;border-radius:3px;vertical-align:middle;"> Instagramでフォローする
         </a>
       </div>
     </div>
@@ -342,26 +365,35 @@ footer { background:#060606; padding:2rem 1.25rem; }
   <div class="sns-cta-title">最新情報はSNSで</div>
   <div class="sns-cta-text">イベントの速報・詳細・レポートは<br>公式SNSから発信しています。</div>
   <div class="sns-cta-btns">
-    <a class="sns-cta-btn x" href="https://x.com/jugger__japan" target="_blank" rel="noopener">𝕏 フォロー</a>
-    <a class="sns-cta-btn ig" href="https://www.instagram.com/jugger_japan" target="_blank" rel="noopener">📸 フォロー</a>
+    <a class="sns-cta-btn x" href="https://x.com/jugger__japan" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwMDAiLz48c3ZnIHg9IjExIiB5PSIxMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGQ9Ik0xMi42Ljc1aDIuNDU0bC01LjM2IDYuMTQyTDE2IDE1LjI1aC00LjkzN2wtMy44NjctNS4wNy00LjQyNSA1LjA3SC4zMTZsNS43MzMtNi41N0wwIC43NWg1LjA2M2wzLjQ5NSA0LjYzM0wxMi42MDEuNzVabS0uODYgMTMuMDI4aDEuMzZMNC4zMjMgMi4xNDVIMi44NjV6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPjwvc3ZnPg==" alt="X" style="width:1rem;height:1rem;border-radius:2px;vertical-align:middle;"> フォロー</a>
+    <a class="sns-cta-btn ig" href="https://www.instagram.com/jugger_japan" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJpZzIiIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmZmQ2MDAiLz48c3RvcCBvZmZzZXQ9IjI1JSIgc3RvcC1jb2xvcj0iI2ZmMDY5ZSIvPjxzdG9wIG9mZnNldD0iNzUlIiBzdG9wLWNvbG9yPSIjZmYwMDZhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjkwMGZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9InVybCgjaWcyKSIvPjxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIzIi8+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNy41IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiLz48Y2lyY2xlIGN4PSIzOS41IiBjeT0iMjAuNSIgcj0iMi4yIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="Instagram" style="width:1rem;height:1rem;border-radius:2px;vertical-align:middle;"> フォロー</a>
   </div>
 </div>
 
-<footer>
-  <div class="footer-logo">JUG<span>G</span>ER</div>
-  
-  <div class="footer-contact">
-    <div class="footer-contact-label">お問い合わせ</div>
-    <a class="footer-contact-email" href="mailto:info@jugger.jp">info@jugger.jp</a>
+<footer style="background:#ffffff;color:#111;border-top:1px solid #e8e8e8;padding:2.5rem 1.5rem;">
+  <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;">
+    <img src="data:image/png;base64,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" alt="日本ジャガー協会ロゴ" style="width:48px;height:48px;object-fit:contain;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.12em;color:#111;">JUGGER</div>
   </div>
-  <div class="footer-nav">
-    <a href="index.html">トップ</a>
-    <a href="rules.html">ルール</a>
-    <a href="weapons.html">武器紹介</a>
-    <a href="events.html">イベント</a>
-    <a href="sns.html">SNS</a>
+  <div style="font-size:0.68rem;color:rgba(0,0,0,0.45);letter-spacing:0.12em;margin-bottom:1.25rem;">日本ジャガー協会 / JAPAN JUGGER ASSOCIATION</div>
+  <div style="margin-bottom:1.5rem;padding:0.85rem 1rem;background:#f5f5f5;border-radius:8px;border:1px solid #e8e8e8;display:flex;align-items:center;gap:0.75rem;">
+    <span style="font-size:0.6rem;color:rgba(0,0,0,0.45);letter-spacing:0.15em;font-family:'Bebas Neue',sans-serif;white-space:nowrap;">お問い合わせ</span>
+    <a href="mailto:info@jugger.jp" style="color:#333;font-size:0.82rem;text-decoration:none;">info@jugger.jp</a>
   </div>
-  <div class="footer-copy">© 2025 日本ジャガー協会 / JUGGER JAPAN</div>
+  <div style="display:flex;gap:0.75rem;margin-bottom:1.5rem;">
+    <a href="index.html" style="font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:rgba(0,0,0,0.5);text-decoration:none;">TOP</a>
+    <a href="rules.html" style="font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:rgba(0,0,0,0.5);text-decoration:none;">ルール</a>
+    <a href="weapons.html" style="font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:rgba(0,0,0,0.5);text-decoration:none;">武器紹介</a>
+    <a href="events.html" style="font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:rgba(0,0,0,0.5);text-decoration:none;">イベント</a>
+    <a href="sns.html" style="font-family:'Bebas Neue',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:rgba(0,0,0,0.5);text-decoration:none;">SNS</a>
+  </div>
+  <div style="display:flex;gap:0.85rem;margin-bottom:1.5rem;">
+    <a href="https://www.instagram.com/jugger_japan" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iaWciIHgxPSIwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjA5NDMzIi8+PHN0b3Agb2Zmc2V0PSIyNSUiIHN0eWxlPSJzdG9wLWNvbG9yOiNlNjY4M2MiLz4KPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNkYzI3NDMiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3R5bGU9InN0b3AtY29sb3I6I2NjMjM2NiIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNiYzE4ODgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9InVybCgjaWcpIi8+CjxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiByeD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+" alt="Instagram" style="width:1.8rem;height:1.8rem;border-radius:6px;"></a>
+    <a href="https://x.com/jugger__japan" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iMTQiIGZpbGw9IiMwMDAiLz48c3ZnIHg9IjExIiB5PSIxMSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiB2aWV3Qm94PSIwIDAgMTYgMTYiPjxwYXRoIGQ9Ik0xMi42Ljc1aDIuNDU0bC01LjM2IDYuMTQyTDE2IDE1LjI1aC00LjkzN2wtMy44NjctNS4wNy00LjQyNSA1LjA3SC4zMTZsNS43MzMtNi41N0wwIC43NWg1LjA2M2wzLjQ5NSA0LjYzM0wxMi42MDEuNzVabS0uODYgMTMuMDI4aDEuMzZMNC4zMjMgMi4xNDVIMi44NjV6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPjwvc3ZnPg==" alt="X" style="width:1.8rem;height:1.8rem;border-radius:6px;"></a>
+    <a href="https://youtube.com/@jugger_japan" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcng9IjE0IiBmaWxsPSIjRkYwMDAwIi8+CjxyZWN0IHg9IjEyIiB5PSIxOCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0id2hpdGUiLz4KPHBvbHlnb24gcG9pbnRzPSIyNSwyMyAyNSwzNyAzOCwzMCIgZmlsbD0iI0ZGMDAwMCIvPgo8L3N2Zz4=" alt="YouTube" style="width:1.8rem;height:1.8rem;border-radius:6px;"></a>
+    <a href="https://www.tiktok.com/@jugger_japan" target="_blank" rel="noopener"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48cmVjdCB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHJ4PSIxNCIgZmlsbD0iIzAxMDEwMSIvPjxwYXRoIGQ9Ik00MS41IDE0LjVjMCAwIDAuOCA2LjIgNy41IDcuMnY2LjJjMCAwLTQuOCAwLjMtOC4yLTIuOHYxMi45YzAgNi43LTUuNCAxMi41LTEyLjEgMTIuNS02LjcgMC0xMi4xLTUuNi0xMi4xLTEyLjUgMC02LjkgNS40LTEyLjUgMTIuMS0xMi41IDAuNyAwIDEuNCAwLjEgMi4xIDAuMnY2LjRjLTAuNy0wLjItMS40LTAuMy0yLjEtMC4zLTMuNCAwLTYuMiAyLjgtNi4yIDYuMiAwIDMuNCAyLjggNi4yIDYuMiA2LjIgMy40IDAgNi4zLTIuNyA2LjMtNi4yVjE0LjVoNi41eiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNNDAuNSAxMy41YzAgMCAwLjggNi4yIDcuNSA3LjJ2Ni4yYzAgMC00LjggMC4zLTguMi0yLjgiIGZpbGw9IiNFRTFENTIiLz48cGF0aCBkPSJNMjcuNyAzOC4xYy0wLjctMC4yLTEuNC0wLjMtMi4xLTAuM3Y2LjRjMC43IDAuMiAxLjQgMC4zIDIuMSAwLjMiIGZpbGw9IiM2OUM5RDAiLz48L3N2Zz4=" alt="TikTok" style="width:1.8rem;height:1.8rem;border-radius:6px;"></a>
+  </div>
+  <div style="font-size:0.68rem;color:rgba(0,0,0,0.35);letter-spacing:0.08em;">© 2025 日本ジャガー協会 / JUGGER JAPAN</div>
 </footer>
 
 <script>
